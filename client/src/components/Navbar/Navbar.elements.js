@@ -25,7 +25,7 @@ export const NavbarContainer = styled(Container)`
 `;
 
 export const NavLogo = styled(Link)`
-  color: #fff;
+  color: gold;
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
@@ -36,6 +36,8 @@ export const NavLogo = styled(Link)`
 
 export const NavIcon = styled(FaCanadianMapleLeaf)`
   margin-right: 0.5rem;
+  font-size: 3rem;
+  color: gold;
 `;
 
 export const MobileIcon = styled.div`
