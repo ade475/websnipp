@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
-import { Button } from '../../globalStyles';
+
 import {
   Nav,
   NavbarContainer,
@@ -10,32 +10,14 @@ import {
   MobileIcon,
   NavMenu,
   NavItem,
-  NavItemBtn,
   NavLinks,
-  NavBtnLink,
 } from './Navbar.elements';
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener('resize', showButton);
-
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
@@ -54,20 +36,18 @@ function Navbar() {
                   Home
                 </NavLinks>
               </NavItem>
-
-              <NavItemBtn>
-                {button ? (
-                  <NavBtnLink to='/sign-up'>
-                    <Button primary>SIGN UP</Button>
-                  </NavBtnLink>
-                ) : (
-                  <NavBtnLink to='/sign-up'>
-                    <Button onClick={closeMobileMenu} fontBig primary>
-                      SIGN UP
-                    </Button>
-                  </NavBtnLink>
-                )}
-              </NavItemBtn>
+              <NavItem>
+                <NavLinks to='/products'>Products</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to='/cart'>Cart</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to='/signup'>Signup</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to='/login'>Login</NavLinks>
+              </NavItem>
             </NavMenu>
           </NavbarContainer>
         </Nav>

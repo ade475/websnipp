@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Home = () => {
+const Orders = () => {
   return (
     <div
-      className='homepage'
+      className='page'
       style={{
         height: '100vh',
-        backgroundColor: 'pink',
+        backgroundColor: 'grey',
         alignContent: 'center',
         justifyContent: 'center',
         padding: '60px',
@@ -20,4 +20,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Orders;

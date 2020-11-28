@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Home = () => {
+const Login = () => {
   return (
     <div
-      className='homepage'
+      className='Loginpage'
       style={{
         height: '100vh',
-        backgroundColor: 'pink',
+        backgroundColor: 'orange',
         alignContent: 'center',
         justifyContent: 'center',
         padding: '60px',
@@ -20,4 +20,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Login;
